@@ -1,0 +1,293 @@
+body{
+    background: gray;
+}
+
+   .grid-container{
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    display: grid;
+    grid-auto-rows: 300px;
+    grid-auto-columns: 200px;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(auto-fill) minmax(250px, 1fr);
+}
+
+.grid-container > header{
+    background: greenyellow;
+}
+
+.grid-container > main{
+    background: red;
+}
+.grid-container > aside{
+    background: blue;
+}
+
+.grid-container > footer{
+    background: rgb(19, 19, 18);
+}
+
+.grid-container > nav {
+    background: pink;
+}
+ .grid-container > out-of-the-box{
+    background: rgb(138, 12, 138); 
+}
+
+@media (min-width:240px) and (max-width:1000px){
+    .grid-container{
+        background-color: red;
+    }
+}
+
+/*
+.grid-container{
+    min-height: 100vh;
+    background: white;
+
+    display: grid;
+    grid-template-columns: [col1]50px [col2]50px [col3]50px [col4]50px [col5];
+    grid-template-rows: [row1]50px [row2]50px [row3]50px [row4]50px [row5];
+   
+}
+ "header  header  header aside-2"
+    "main   main  aside aside-2"
+    "footer  footer footer aside-2"
+    "footer-2  footer-2 footer-2 footer-2";
+
+
+.grid-container > header{
+    background: greenyellow;
+    grid-column: col1 / col4;
+    grid-row: row1 / row2;
+}
+
+.grid-container > main{
+    background: red;
+    grid-column: col1 / col3;
+    grid-row: row2 / row3;
+}
+.grid-container > aside{
+    background: blue;
+    grid-column: col3 / col4;
+    grid-row: row2 / row3;
+}
+
+
+.grid-container > .aside-2{
+    background:aqua;
+    grid-column: col4 / col5;
+    grid-row: row1 / row4;
+}
+.grid-container > footer{
+    background: rgb(19, 19, 18);
+    grid-column: col1 / col5;
+    grid-row: row3 / row3;
+}
+.grid-container{
+    min-height: 100vh;
+    height: auto;
+    background: white;
+    display: grid;
+    grid-template-areas:
+    "header header header header header"
+    "nav main main main aside"
+    "nav main  main main aside"
+    " .  main main main  . "
+    "footer footer footer footer footer";
+    grid-template-columns: 100px 1fr 1fr 1fr 200px;
+    grid-template-rows:10vh 200px 200px minmax(200px 1fr) 100px;
+    align-content: space-between;
+    justify-content: space-between;
+
+}
+
+.grid-container > nav {
+    grid-area: nav;
+    background: pink;
+ 
+}
+.grid-container > header{
+    grid-area: header;
+    background: greenyellow;
+}
+
+.grid-container > main{
+   width: 1000px;
+   height: 10px;
+    grid-area: main;
+    background: red;
+    justify-self: center;
+    align-self: center;
+}
+
+.grid-container > aside{
+    grid-area: aside;
+    background: blue;
+}
+
+.grid-container > footer{
+    grid-area: footer;
+    background: rgb(19, 19, 18);
+}
+/*
+.grid-container{
+    min-height: 100vh;
+    background: white;
+    display: grid;
+    justify-items: stretch;
+    grid-template:
+    "nav header header header aside"
+    "nav main main main aside"
+    "nav main  main main  aside"
+    "footer footer footer footer aside" ;
+    grid-template-columns: 100px 1fr 2fr 1fr 20vw;
+    grid-template-rows: 20vh 4fr 1fr 300px;
+    row-gap: 50px;
+    /*column-gap: 20px;
+    gap: 50px 20px;
+
+}
+.grid-container > nav {
+    grid-area: nav;
+    background: pink;
+ 
+}
+.grid-container > header{
+    grid-area: header;
+    background: greenyellow;
+    align-self: center;
+}
+
+.grid-container > main{
+    grid-area: main;
+    background: red;
+}
+.grid-container > aside{
+    grid-area: aside;
+    background: blue;
+}
+
+.grid-container > footer{
+    grid-area: footer;
+    background: rgb(19, 19, 18);
+}
+/*
+.grid-container > .somthing{
+
+}*/
+
+
+
+
+/*
+   .grid-container{
+    min-height: 100vh;
+    background: white;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template:
+    "header  header  header . aside-2"
+    "main   main  aside . aside-2"
+    "footer  footer footer . aside-2"
+    "footer-2  footer-2 footer-2 footer-2 footer-2" ;
+}
+
+.grid-container > header{
+    grid-area: header;
+    background: greenyellow;
+}
+
+.grid-container > main{
+    grid-area: main;
+    background: red;
+}
+.grid-container > aside{
+    grid-area: aside;
+    background: blue;
+}
+
+
+.grid-container > .aside-2{
+    grid-area: aside-2;
+    background:aqua;
+}
+.grid-container > footer{
+    grid-area: footer;
+    background: rgb(19, 19, 18);
+}
+
+.grid-container > .footer-2{
+    grid-area: footer-2;
+    background:rgb(85, 85, 42);
+}
+
+.grid-container > nav {
+    background: pink;
+    grid-column: col4 / col5;
+    grid-row: row1 / row4;
+}
+
+/*
+.grid-container{
+    min-height: 100vh;
+    background: white;
+
+    display: grid;
+    grid-template-columns: [col1]50px [col2]50px [col3]50px [col4]50px [col5];
+    grid-template-rows: [row1]50px [row2]50px [row3]50px [row4]50px [row5];
+   
+}
+ "header  header  header aside-2"
+    "main   main  aside aside-2"
+    "footer  footer footer aside-2"
+    "footer-2  footer-2 footer-2 footer-2";
+
+
+.grid-container > header{
+    background: greenyellow;
+    grid-column: col1 / col4;
+    grid-row: row1 / row2;
+}
+
+.grid-container > main{
+    background: red;
+    grid-column: col1 / col3;
+    grid-row: row2 / row3;
+}
+.grid-container > aside{
+    background: blue;
+    grid-column: col3 / col4;
+    grid-row: row2 / row3;
+}
+
+
+.grid-container > .aside-2{
+    background:aqua;
+    grid-column: col4 / col5;
+    grid-row: row1 / row4;
+}
+.grid-container > footer{
+    background: rgb(19, 19, 18);
+    grid-column: col1 / col5;
+    grid-row: row3 / row3;
+}
+
+.grid-container > .footer-2{
+    background:rgb(85, 85, 42);
+    grid-column: col1 / col5;
+    grid-row: row4 / row5;
+}
+*/
+/*grid-template-columns: minmax(0,1fr)
+ minmax(0,2.5fr) minmax(0,15rem);*
+ grid-template-colums: 3fr reapead(7, 1fr)
+ grid-template-colums:  reapead(auto-fill, minimax(100px, 1fr)
+  grid-template-colums:  reapead(auto-fit, minimax(100px, 1fr)
+  gap
+subgrid
+grid-auto-columns
+grid-auto-rows
+grid-auto-flow*/
